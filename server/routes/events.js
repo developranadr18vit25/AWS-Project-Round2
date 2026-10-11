@@ -39,7 +39,6 @@ router.get('/', async (req, res) => {
 });
 
 
-
 router.delete('/:id', auth('admin'), async (req, res) => {
     await Event.findByIdAndDelete(req.params.id);
     res.json({ ok: true });
